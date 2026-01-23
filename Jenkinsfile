@@ -1,12 +1,6 @@
 pipeline {
     agent any // Specifies where the pipeline will run (any available agent)
     stages {
-        stage('Plain') {
-            steps {
-                echo 'Planning...' // Example step: print a message
-                // Add your build commands here, e.g., 'sh "mvn clean install"'
-            }
-        }
         stage('Build') {
             steps {
                 echo 'Building...' // Example step: print a message
