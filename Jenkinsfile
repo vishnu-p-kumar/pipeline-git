@@ -19,5 +19,11 @@ pipeline {
                 // Add your deploy commands here, e.g., 'sh "your_deploy_script.sh"'
             }
         }
+        stage('Using') {
+            steps {
+                echo 'Using...' // Example step: print a message
+                // Add your build commands here, e.g., 'sh "mvn clean install"'
+            }
+        }
     }
 }
