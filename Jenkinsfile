@@ -4,11 +4,11 @@ pipeline {
         stage('Build') {
             steps {
                 echo "Starting build..."
-                // Allora optimization step
-                allora {
-                    strategy 'speed'
-                    optimize true
-                }
+                // Remove or comment out this line:
+                // allora {
+                //     strategy 'speed'
+                //     optimize true
+                // }
             }
         }
         stage('Test') {
