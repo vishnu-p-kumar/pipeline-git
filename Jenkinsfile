@@ -30,5 +30,6 @@ pipeline {
                 echo 'Sample...' // Example step: print a message
                 // Add your build commands here, e.g., 'sh "mvn clean install"'
             }
+        }
     }
 }
