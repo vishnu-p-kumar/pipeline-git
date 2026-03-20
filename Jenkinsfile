@@ -1,40 +1,19 @@
 pipeline {
-    agent any // Specifies where the pipeline will run (any available agent)
+    agent any
     stages {
         stage('Build') {
             steps {
-                echo 'Building...' // Example step: print a message
-                // Add your build commands here, e.g., 'sh "mvn clean install"'
+                echo "Starting build..."
+                // Allora optimization step
+                allora {
+                    strategy 'speed'
+                    optimize true
+                }
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing...' // Example step: print a message
-                // Add your test commands here, e.g., 'sh "mvn test"'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying...' // Example step: print a message
-                // Add your deploy commands here, e.g., 'sh "your_deploy_script.sh"'
-            }
-        }
-        stage('Using') {
-            steps {
-                echo 'Using...' // Example step: print a message
-                // Add your build commands here, e.g., 'sh "mvn clean install"'
-            }
-        }
-        stage('Sample') {
-            steps {
-                echo 'Sample...' // Example step: print a message
-                // Add your build commands here, e.g., 'sh "mvn clean install"'
-            }
-        }
-                stage('S') {
-            steps {
-                echo 'S...' // Example step: print a message
-                // Add your build commands here, e.g., 'sh "mvn clean install"'
+                echo "Running tests..."
             }
         }
     }
