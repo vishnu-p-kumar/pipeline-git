@@ -31,5 +31,11 @@ pipeline {
                 // Add your build commands here, e.g., 'sh "mvn clean install"'
             }
         }
+                stage('S') {
+            steps {
+                echo 'S...' // Example step: print a message
+                // Add your build commands here, e.g., 'sh "mvn clean install"'
+            }
+        }
     }
 }
